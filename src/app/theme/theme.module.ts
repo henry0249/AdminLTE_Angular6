@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header/header.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { SettingsbarComponent } from './settingsbar/settingsbar.component';
-import { FooterComponent } from './footer/footer.component';
+import { ThemeComponent } from './theme.component';
+import { SharedModule } from '../shared/shared.module';
+import { ThemeRoutingModule } from './ThemeRoutingModule/theme.routing.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule, SharedModule, ThemeRoutingModule
   ],
-  exports: [HeaderComponent, SidebarComponent, SettingsbarComponent, FooterComponent],
-  declarations: [HeaderComponent, SidebarComponent, SettingsbarComponent, FooterComponent]
+  declarations: [ThemeComponent]
 })
 export class ThemeModule { }
