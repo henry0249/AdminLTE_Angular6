@@ -3,7 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { ThemeComponent } from '../theme.component';
 
 const routes: Routes = [
-  { path: '', component: ThemeComponent }
+  {
+    path: '', component: ThemeComponent,
+    children: [
+      { path: 'ui-elements', loadChildren: '../ui-elements/ui-elements.module#UiElementsModule' }
+    ]
+  }
 ];
 
 @NgModule({
